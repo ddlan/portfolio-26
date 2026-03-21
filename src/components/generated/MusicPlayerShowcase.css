@@ -499,3 +499,22 @@
   opacity: 1;
 }
 
+.incite-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.lereddit-logo {
+  opacity: 0.8;
+}
+
+.incite-logo {
+  opacity: 0.9;
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+}

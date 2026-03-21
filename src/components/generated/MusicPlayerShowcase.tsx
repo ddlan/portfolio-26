@@ -156,6 +156,7 @@ const ExperienceLine = ({
 export const MusicPlayerShowcase = () => {
   const mainRef = useRef<HTMLElement>(null);
   const [showQuestionMark, setShowQuestionMark] = useState(false);
+  let step = 1;
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -230,6 +231,14 @@ export const MusicPlayerShowcase = () => {
             >
               Email
             </a>
+            <a
+              href="/Danny_Lan_resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="header-nav-link"
+            >
+              Resume
+            </a>
           </nav>
         </header>
 
@@ -284,48 +293,116 @@ export const MusicPlayerShowcase = () => {
           className="section-animate showcase-section"
         >
           <span className="section-number">
-            01
+            0{step++}
           </span>
-          <FancySmancyProjectTitle>Altocumulus Industries</FancySmancyProjectTitle>
+          <FancySmancyProjectTitle>Beam</FancySmancyProjectTitle>
           <ProjectDescription>
-            ML app that identifies people in images by comparing uploads against a trained dataset.
-            Python backend with Indicoio for facial localization and recognition, plus a public web
-            frontend. Worked with ML APIs for security use cases.
+            Social Media for your real friends. A finsta that feels real. iOS with Ruby backend. YC rejected (we tried).
           </ProjectDescription>
-          <MusicPlayerButton
-            audioName="btn-hover.mp3"
-            pointerImg={musicPointer}
-            maskImg={mask}
-            href="https://devpost.com/software/altocumulus-industries"
-            linkLabel="View on Devpost"
-          />
+          <div className="incite-wrapper">
+            <MusicPlayerButton
+              audioName="btn-hover.mp3"
+              pointerImg={musicPointer1}
+              maskImg={mask1}
+              href="https://docs.google.com/presentation/d/1Nhxk3UBKSdHevmk1tuECUGzZJ00nyvNmB1mFkz34lhg/edit?usp=sharing"
+              linkLabel="Read the pitch"
+            />
+            <img
+              src="/beam.svg"
+              alt=""
+              className='logo'
+            />
+          </div>
+
         </section>
 
         <section
           className="section-animate showcase-section"
         >
           <span className="section-number">
-            02
+            0{step++}
+          </span>
+          <FancySmancyProjectTitle>LeReddit</FancySmancyProjectTitle>
+          <ProjectDescription>
+            Doomscrolling but you learn a language, so you're not really wasting your time. Swift.
+          </ProjectDescription>
+          <div className="incite-wrapper">
+            <MusicPlayerButton
+              audioName="btn-hover.mp3"
+              pointerImg={musicPointer1}
+              maskImg={mask1}
+              href="https://github.com/ddlan/LeReddit"
+              linkLabel="View on Github"
+            />
+            <img
+              src="/lereddit-orange.png"
+              alt=""
+              className='logo lereddit-logo'
+            />
+          </div>
+
+        </section>
+
+        <section
+          className="section-animate showcase-section"
+        >
+          <span className="section-number">
+            0{step++}
+          </span>
+          <FancySmancyProjectTitle>Cat's Portfolio</FancySmancyProjectTitle>
+          <ProjectDescription>
+            Playing around with Typescript and animations. If you've got the vision, I can build it.
+          </ProjectDescription>
+          <div className="incite-wrapper">
+            <MusicPlayerButton
+              audioName="btn-hover.mp3"
+              pointerImg={musicPointer1}
+              maskImg={mask1}
+              href="https://catherinehoang44.github.io/"
+              linkLabel="Check it out"
+            />
+            <img
+              src="/cat.png"
+              alt=""
+              className='logo'
+            />
+          </div>
+
+        </section>
+
+        <section
+          className="section-animate showcase-section"
+        >
+          <span className="section-number">
+            0{step++}
           </span>
           <FancySmancyProjectTitle>InCite</FancySmancyProjectTitle>
           <ProjectDescription>
-            Chrome extension one-click MLA, APA, Chicago, or Harvard citations for the current page;
+            Chrome extension for one-click MLA, APA, Chicago, or Harvard citations for the current page;
             save multiple bibliographies and copy to clipboard. React + MobX, microlink metascraper.
           </ProjectDescription>
-          <MusicPlayerButton
-            audioName="btn-hover.mp3"
-            pointerImg={musicPointer1}
-            maskImg={mask1}
-            href="https://github.com/brucejh99/inCite"
-            linkLabel="View on GitHub"
-          />
+          <div className="incite-wrapper">
+            <MusicPlayerButton
+              audioName="btn-hover.mp3"
+              pointerImg={musicPointer1}
+              maskImg={mask1}
+              href="https://github.com/brucejh99/inCite"
+              linkLabel="View on GitHub"
+            />
+            <img
+              src="/incite.png"
+              alt=""
+              className='logo incite-logo'
+            />
+          </div>
+
         </section>
 
         <section
           className="section-animate showcase-section"
         >
           <span className="section-number">
-            03
+            0{step++}
           </span>
           <FancySmancyProjectTitle>NightBall</FancySmancyProjectTitle>
           <ProjectDescription>
@@ -343,6 +420,27 @@ export const MusicPlayerShowcase = () => {
           />
         </section>
 
+        <section
+          className="section-animate showcase-section"
+        >
+          <span className="section-number">
+            0{step++}
+          </span>
+          <FancySmancyProjectTitle>Altocumulus Industries</FancySmancyProjectTitle>
+          <ProjectDescription>
+            ML app that identifies people in images by comparing uploads against a trained dataset.
+            Python backend with Indico.io for facial localization and recognition, plus a public web
+            frontend. Worked with ML APIs for security use cases.
+          </ProjectDescription>
+          <MusicPlayerButton
+            audioName="btn-hover.mp3"
+            pointerImg={musicPointer}
+            maskImg={mask}
+            href="https://devpost.com/software/altocumulus-industries"
+            linkLabel="View on Devpost"
+          />
+        </section>
+
         <img
           src="https://storage.googleapis.com/storage.magicpath.ai/user/368065211384610816/figma-assets/fd6a7edb-0ee8-48b6-8e22-cc6b6592ab75.svg"
           alt="Divider"
@@ -357,7 +455,7 @@ export const MusicPlayerShowcase = () => {
           <ExperienceLine name="Instabase" date="Aug 2022 - May 2025" />
           <ExperienceLine name="Coffee Meets Bagel" date="Sep 2021 - Dec 2021" />
           <ExperienceLine name="Apple" date="Jan 2021 - Apr 2021" />
-          <ExperienceLine name="Verizon Media" date="Jan 2019 - Apr 2019" />
+          <ExperienceLine name="Yahoo" date="Jan 2019 - Apr 2019" />
         </section>
 
         <footer className="section-animate showcase-footer">
