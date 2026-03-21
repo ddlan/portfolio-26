@@ -155,6 +155,14 @@ const ExperienceLine = ({
 );
 export const MusicPlayerShowcase = () => {
   const mainRef = useRef<HTMLElement>(null);
+  const [showQuestionMark, setShowQuestionMark] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowQuestionMark(true);
+    }, 1500);
+    return () => clearTimeout(timer);
+  }, []);
 
   useEffect(() => {
     const main = mainRef.current;
@@ -197,9 +205,14 @@ export const MusicPlayerShowcase = () => {
                 bef
               </h1>
             </div>
-            <p className="header-line header-line-2 header-subtitle">
-              Frontend Engineer
-            </p>
+            <div className="header-line header-line-2">
+              <p className="header-subtitle">
+                Frontend Engineer
+                <span className={`question-mark ${showQuestionMark ? 'question-mark-visible' : ''}`}>
+                  ?
+                </span>
+              </p>
+            </div>
           </div>
 
           <nav className="header-line header-line-3 header-nav">
@@ -254,8 +267,7 @@ export const MusicPlayerShowcase = () => {
           className="section-animate showcase-section"
         >
           <p className="intro-quote">
-            "The future is already here - it's just not very evenly distributed. 
-            - William Gibson
+            Every day I become less of a code monkey and more of an agent wrangler.
           </p>
           <p className="intro-description">
             See how my brain works:
