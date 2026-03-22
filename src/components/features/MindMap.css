@@ -1,0 +1,7 @@
+
+.mindmap-container {
+  /* max-width: 480px; */
+}
+.force-graph-container .graph-controls {
+  display: none !important;
+}

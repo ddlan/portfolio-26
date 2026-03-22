@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import './MusicPlayerShowcase.css';
+import { MindMap } from '../features/MindMap';
 
 // Placeholder SVG data URIs to replace missing asset imports
 const musicPointer =
@@ -283,11 +284,7 @@ export const MusicPlayerShowcase = () => {
           </p>
         </section>
 
-        <img
-          src="https://storage.googleapis.com/storage.magicpath.ai/user/368065211384610816/figma-assets/7dcb634f-8765-4001-83f1-ccfa91e3bf4a.svg"
-          alt="Divider"
-          className="divider-image"
-        />
+        <MindMap />
 
         <section
           className="section-animate showcase-section"
@@ -427,7 +424,7 @@ export const MusicPlayerShowcase = () => {
           </div>
         </section>
 
-        <section
+        {/* <section
           className="section-animate showcase-section"
         >
           <span className="section-number">
@@ -453,7 +450,7 @@ export const MusicPlayerShowcase = () => {
               className='logo incite-logo'
             />
           </div>
-        </section>
+        </section> */}
 
         <img
           src="https://storage.googleapis.com/storage.magicpath.ai/user/368065211384610816/figma-assets/fd6a7edb-0ee8-48b6-8e22-cc6b6592ab75.svg"
