@@ -38,6 +38,8 @@ const graphData = {
     { id: 'CS/BBA', group: 5 },
     { id: 'Entrepreneurship Society', group: 5 },
     { id: 'Entrepreneurship Specialization', group: 5 },
+
+    { id: 'Language Learning', group: 6 },
   ],
   links: [
     { source: 'Music', target: 'Guitar' },
